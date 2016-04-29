@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title> A challenge of fire and ice </title>
+		<script type="text/javascript">
+			window.onload = function(){
+				for(var i=1; i<101; i++){
+					document.body.innerHTML += "<div>"+i+":"+FireOrIce(i)+"</div>";
+				}
+			}
+
+			function FireOrIce(num){
+				if(num%3 == 0 && num%7 == 0)
+					return "Fire and Ice";
+				
+				if(num%3 == 0)
+					return "Fire";
+
+				if(num%7 == 0)
+					return "Ice";
+
+				return num.toString();
+			}
+		</script>
+	</head>
+	<body>
+	 (Use control + f to find numbers easily)
+	</body>
+</html>
