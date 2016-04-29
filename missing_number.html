@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Missing Number </title>
+		<script type="text/javascript">
+			window.onload = function(){
+				text_in = document.getElementById("in");
+				text_out = document.getElementById("out");
+			}
+
+			function Run(){
+				numbers = text_in.value.split(",");
+
+				for (var i = numbers.length - 1; i >= 0; i--) 
+					numbers[i] = parseInt(numbers[i]);
+
+				numbers.sort();
+
+				for(var i=0; i<numbers.length-1; i++){
+					if(numbers[i] != numbers[i+1]-1){
+						text_out.innerHTML = numbers[i] + 1 + "";
+						return;
+					}
+				}
+
+				text_out.innerHTML = "No Number Missing";
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="in" style="border-width: 2px; border-color: black; font-size: 12pt;">
+		<button onclick="Run()">Process Input</button>
+		<div>
+			Output:
+			<div id="out"></div>
+		</div>
+	</body>
+</html>
