@@ -1,0 +1,6 @@
+walk: left
+skip
+goto walk
+run: left
+left
+goto run
